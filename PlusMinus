@@ -1,0 +1,36 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+
+    psum = 0
+    nsum = 0
+    zsum = 0
+    for i in range(len(arr)):
+        if arr[i] >0:
+            psum += 1
+        elif arr[i] == 0:
+            zsum += 1
+            
+        else:
+            nsum += 1
+            
+    print(psum/len(arr))
+    print(nsum/len(arr))
+    print(zsum/len(arr))
+
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
